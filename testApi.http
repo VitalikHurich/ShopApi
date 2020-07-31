@@ -1,0 +1,149 @@
+GET http://localhost:5000/api/categories
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlZpdGFsaWsiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE1OTA5MjM5NzQsImV4cCI6MTU5MDkyNTc3NCwiaWF0IjoxNTkwOTIzOTc0fQ.sreZntYhz_h-5TmJySqLZY7_SBFyKH5idDILqkfLRDo
+
+###
+POST http://localhost:5000/api/categories
+Content-Type: application/json
+
+{
+    "categoryName": "qwe"
+}
+
+###
+PUT http://localhost:5000/api/categories/4
+Content-Type: application/json
+
+{
+    "categoryName": "qwerty"
+}
+
+###
+DELETE  http://localhost:5000/api/categories/3
+
+
+###
+GET http://localhost:5000/api/manufacturers
+
+###
+POST http://localhost:5000/api/manufacturers
+Content-Type: application/json
+
+{
+    "manufacturerName": "Prestigio"
+}
+
+###
+PUT http://localhost:5000/api/manufacturers/5
+Content-Type: application/json
+
+{
+    "manufacturerName": "PrestigiO"
+}
+
+###
+DELETE http://localhost:5000/api/manufacturers/5
+
+
+###
+GET http://localhost:5000/api/roles
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlZpdGFsaWsiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE1OTExNzI0NzMsImV4cCI6MTU5MTE3NjA3MywiaWF0IjoxNTkxMTcyNDczfQ.6jUTYaIr0pvT_bstcUPRX-UhJFjMH6Lhys_Og6uLkis
+
+###
+POST http://localhost:5000/api/roles
+Content-Type: application/json
+
+{
+    "roleName": "newRole"
+}
+
+###
+PUT http://localhost:5000/api/roles/3
+Content-Type: application/json
+
+{
+    "roleName": "newRolE"
+}
+
+###
+DELETE http://localhost:5000/api/roles/3
+
+
+###
+GET http://localhost:5000/api/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlZpdGFsaWsiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE1OTEyMTQxOTQsImV4cCI6MTU5MTIxNzc5NCwiaWF0IjoxNTkxMjE0MTk0fQ.B3AglJhOedlnad4f_VqzCLUIZjl7mFP2VRi4DwkA6ww
+
+###
+GET http://localhost:5000/api/userroles/1
+
+POST  http://localhost:5000/api/userroles
+Content-Type: application/json
+
+{
+    "UserId": 1,
+    "RoleId": 3
+}
+
+###
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "firstName": "B",
+    "lastName": "B",
+    "login": "Vitalik",
+    "password": "b"
+}
+
+###
+PUT http://localhost:5000/api/users/1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlZpdGFsaWsiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE1OTExNzYxNDAsImV4cCI6MTU5MTE3OTc0MCwiaWF0IjoxNTkxMTc2MTQwfQ.riGiTkku57QAP_GIhwvysHpRKQFzS7tD-BateIru6ao
+Content-Type: application/json
+
+{
+    "firstName": "zxc",
+    "lastName": "zxc",
+    "password": "zxc"
+}
+
+###
+DELETE  http://localhost:5000/api/users/2
+
+###
+GET http://localhost:5000/api/goods
+Content-Type: application/json
+
+{
+    "PageNumber": 1,
+    "PageSize": 2
+}
+
+###
+
+POST http://localhost:5000/api/goods
+Content-Type: application/json
+
+{
+    "GoodName": "a",
+    "GoodCount": 2,
+    "GoodPriceMinimal": 1,
+    "GoodPriceActual": 2,
+    "Description": "a",
+    "CategoryId": 1,
+    "ManufacturerId": 1
+}
+
+###
+POST http://localhost:5000/api/auth/authenticate
+Content-Type: application/json
+
+{
+    "Login": "Vitalik",
+    "Password": "123"
+}
+
+###
+GET http://localhost:5000/api/orderdetails
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlZpdGFsaWsiLCJuYW1laWQiOiIxMTExIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNTkyMzM2Mjg3LCJleHAiOjE1OTIzMzk4ODcsImlhdCI6MTU5MjMzNjI4N30.6sgjAtF8UbvhMqdAPQFCpYCmYIE6OFrDXdFapnDaZD4
+###
+GET http://localhost:5000/api/orders
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlZpdGFsaWsiLCJuYW1laWQiOiIxMTExIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNTkyMzM2Mjg3LCJleHAiOjE1OTIzMzk4ODcsImlhdCI6MTU5MjMzNjI4N30.6sgjAtF8UbvhMqdAPQFCpYCmYIE6OFrDXdFapnDaZD4
